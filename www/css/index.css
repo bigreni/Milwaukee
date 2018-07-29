@@ -1,0 +1,297 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    background-color: #114b8f;
+}
+
+div#fullpage {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    color: #f6e806;
+}
+
+table.routeBox{
+    color: #f6e806;
+}
+
+#tblResults {
+    background-color: #119811;
+    color: #FFF;
+    margin: 0 2vw 0 2vw;
+    border:0; 
+    width: 96vw;
+    height: 100%;
+}
+
+td.spacer {
+    background-color: #202020;
+    height: 5px;
+}
+
+tr.header{
+    color: #f6e806;
+}
+
+tr.predictions{
+    font-size: large;
+}
+
+a.langOption{
+    text-decoration: none;
+}
+
+a:link
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited
+{
+    color: white;
+}
+
+/* mouse over link */
+a:hover
+{
+    color: white;
+}
+
+/* selected link */
+a:active
+{
+    color: white;
+} 
+
+h4.selectLanguage {
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 5px 0 5px 0;
+    background-color: #119811;
+    color: #fff;
+}
+
+
+
+h3 {
+margin: 0;
+color: #f6e806;
+}
+
+ul {
+    list-style: none;
+    padding: 0 10px 0 10px;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+.hidden { display: none !important; visibility: hidden; }
+
+h2 { text-shadow: 1px 1px 0px #000; }
+
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+
+h1, h2
+{
+	margin-left: auto; margin-right: auto;
+	text-align: center;
+	color: #438ac5;
+   	text-shadow: 1px 1px 1px #000;
+}
+
+h4, h5{
+    color: #008A5F;
+}
+
+select
+{
+	width:100%;
+	background-color: #CCC;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: none;
+    text-align: left;
+}
+
+option.displayNone
+{
+	display:none;
+}
+
+select.ui-select div.ui-btn
+{
+    width:90vh;
+	background-color: #CCC;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: none;
+    text-align: left;
+    font-size: medium;
+	margin-bottom : 10px;
+}
+/*select#MainMobileContent_stopList
+{
+    -webkit-appearance: none;
+    font-size: 10px;
+}*/
+
+ul.realtime-results-mappingoptions{
+    display: none;
+}
+
+dd
+{
+    margin: 0 1vw 0 1vw;
+}
+
+#refresh{
+    display: none;
+}
+
+	.realtime-results-arrival {
+    color: #008A5F;
+	margin: 10px;
+	}
+
+		.realtime-results-arrival dt {
+
+			font-size: 1.2em;
+		}
+
+		.realtime-results-arrival dd {
+
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+
+		.realtime-results-upcoming {
+
+			font-size: 18px !important;
+		}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25.5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19.5px;
+  width: 19.5px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19.5px);
+  -ms-transform: translateX(19.5px);
+  transform: translateX(19.5px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25.5px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
