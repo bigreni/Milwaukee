@@ -58,12 +58,12 @@
    function checkFirstUse()
     {
         $(".dropList").select2();
-        window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
-            window.ga.trackView('Home');
-        });  
-        initApp();
-        askRating();
-        //document.getElementById('screen').style.display = 'none';     
+        //window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
+        //    window.ga.trackView('Home');
+        //});  
+        //initApp();
+        //askRating();
+        document.getElementById('screen').style.display = 'none';     
     }
 
 function askRating()
