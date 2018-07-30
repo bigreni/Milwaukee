@@ -57,7 +57,6 @@
 
    function checkFirstUse()
     {
-        $(".dropList").select2();
         window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
             window.ga.trackView('Home');
         });  
