@@ -1,7 +1,10 @@
     function onLoad() {
+        if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent))) {
+            document.addEventListener('deviceready', checkFirstUse, false);
+        } else {
             checkFirstUse();
         }
-
+    }
     var admobid = {};
     if (/(android)/i.test(navigator.userAgent)) {
         admobid = { // for Android
@@ -60,8 +63,7 @@
         });  
         initApp();
         askRating();
-        //document.getElementById("screen").style.display = 'none';
-        document.getElementById("footer").style.visibility = 'visible';
+        //document.getElementById("screen").style.display = 'none';     
     }
 
 function askRating()
