@@ -40,9 +40,9 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <gap:plugin name="cordova-plugin-dialogs" source="npm"/>
     <gap:plugin name="cordova-plugin-apprate" source="npm"/>
-    <gap:plugin name="cordova-plugin-google-analytics" source="npm">
-        <param "GMS_VERSION" value="11.0.1" />
-    </gap:plugin>
+    <plugin name="cordova-plugin-google-analytics" source="npm">
+        <variable "GMS_VERSION" value="11.0.1" />
+    </plugin>
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="data:*" />
