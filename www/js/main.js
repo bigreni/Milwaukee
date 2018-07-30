@@ -1,13 +1,7 @@
     function onLoad() {
-        alert('1');
-        if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent))) {
-            alert('3');
-            document.addEventListener('deviceready', checkFirstUse, false);
-        } else {
-        alert('2');
             checkFirstUse();
         }
-    }
+
     var admobid = {};
     if (/(android)/i.test(navigator.userAgent)) {
         admobid = { // for Android
@@ -60,14 +54,14 @@
 
    function checkFirstUse()
     {
-            alert('4');
         $(".dropList").select2();
-        //window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
-        //    window.ga.trackView('Home');
-        //});  
-        //initApp();
-        //askRating();
-        document.getElementById("screen").style.display = 'none';     
+        window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
+            window.ga.trackView('Home');
+        });  
+        initApp();
+        askRating();
+        //document.getElementById("screen").style.display = 'none';
+        document.getElementById("footer").style.visibility = 'visible';
     }
 
 function askRating()
