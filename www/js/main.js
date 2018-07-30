@@ -57,10 +57,13 @@
 
    function checkFirstUse()
     {
-        window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
-            window.ga.trackView('Home');
-        });  
+        alert('1');
+        //window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
+        //    window.ga.trackView('Home');
+        //});  
+        alert('2');
         initApp();
+        alert('3');
         askRating();
         //document.getElementById("screen").style.display = 'none';     
     }
