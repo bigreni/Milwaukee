@@ -36,8 +36,8 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
         var cachebuster = Math.round(new Date().getTime() / 1000);
-        //document.write('<script type="text/javascript" src="http://bigreni.com/js/milwaukee/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
-        document.write('<script type="text/javascript" src="js/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<script type="text/javascript" src="http://bigreni.com/js/milwaukee/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        //document.write('<script type="text/javascript" src="js/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
     </script>	
 	<script type="text/javascript" src="js/jsrender.min.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>
@@ -49,8 +49,8 @@
                 onLoad();
                 //document.getElementById("screen").style.display = 'none';
             };
-            //document.getElementById("screen").innerHTML = 'Loading...';
-            //document.getElementById("screen").style.display = 'block';
+            document.getElementById("screen").innerHTML = 'Loading...';
+            document.getElementById("screen").style.display = 'block';
         </script> 
     <div id="fullpage" data-role="page">
 		<div id="contentBox" class="box">
