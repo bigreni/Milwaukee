@@ -39,7 +39,7 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <gap:plugin name="cordova-plugin-dialogs" source="npm"/>
     <gap:plugin name="cordova-plugin-apprate" source="npm"/>
-    <gap:plugin name="cordova-plugin-google-analytics" source="npm"/>
+    <gap:plugin name="cordova-plugin-google-analytics" source="npm" spec="1.8.5"/>
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="data:*" />
