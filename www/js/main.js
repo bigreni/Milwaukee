@@ -64,10 +64,10 @@
         $(".dropList").select2();
         $('#simplemenu').sidr();
         alert('1');
-        //window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
-        //    window.ga.trackView('Home');
-        //});  
-        //alert('2');
+        window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
+            window.ga.trackView('Home');
+        });  
+        alert('2');
         //initApp();
         //alert('3');
         //askRating();
