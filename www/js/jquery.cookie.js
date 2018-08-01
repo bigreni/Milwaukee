@@ -48,25 +48,28 @@
 
 function loadMain()
 {
-    if(document.getElementById('frmArrivals').src == '')
-    {
-        document.getElementById('frmArrivals').src = 'Livemap.html';
-        document.getElementById('frmArrivals').setAttribute('allow', 'geolocation *;');
-    }
-    document.getElementById('divFaves').style.display = 'none';
-    document.getElementById('divArrivals').style.display = 'block';
-    document.getElementById('divFaves').style.height = '0vh';
-    document.getElementById('divArrivals').style.height = '92vh';
+    //if(document.getElementById('frmArrivals').src == '')
+    //{
+    //    document.getElementById('frmArrivals').src = 'Livemap.html';
+    //    document.getElementById('frmArrivals').setAttribute('allow', 'geolocation *;');
+    //}
+    //document.getElementById('divFaves').style.display = 'none';
+    //document.getElementById('divArrivals').style.display = 'block';
+    //document.getElementById('divFaves').style.height = '0vh';
+    //document.getElementById('divArrivals').style.height = '92vh';
+    window.location = "index.html";
 }
 
 function loadFaves()
 {
-    if(document.getElementById('frmFaves').src == '')
-    {
-        document.getElementById('frmFaves').src = 'Favorites.html';
-    }
-    document.getElementById('divFaves').style.display = 'block';
-    document.getElementById('divArrivals').style.display = 'none';    
-    document.getElementById('divArrivals').style.height = '0vh';
-    document.getElementById('divFaves').style.height = '92vh';
+    //if(document.getElementById('frmFaves').src == '')
+    //{
+    //    document.getElementById('frmFaves').src = 'Favorites.html';
+    //}
+    //document.getElementById('divFaves').style.display = 'block';
+    //document.getElementById('divArrivals').style.display = 'none';    
+    //document.getElementById('divArrivals').style.height = '0vh';
+    //document.getElementById('divFaves').style.height = '92vh';
+    window.location = "Favorites.html";
+
 }
