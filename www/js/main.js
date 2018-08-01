@@ -20,7 +20,9 @@
 
     function initApp() {
         if (!AdMob) { alert('admob plugin not ready'); return; }
+        alert('4');
         initAd();
+        alert('5');
         //display interstitial at startup
         loadInterstitial();
     }
@@ -30,7 +32,9 @@
             bgColor: 'black', // color name, or '#RRGGBB'
             isTesting: false // set to true, to receiving test ad for testing purpose
         };
+        alert('6');
         AdMob.setOptions(defaultOptions);
+        alert('7');
         registerAdEvents();
     }
     // optional, in case respond to events or handle error
@@ -62,10 +66,10 @@
         //    window.ga.trackView('Home');
         //});  
         alert('2');
-        initApp();
+        //initApp();
         alert('3');
         askRating();
-        //document.getElementById("screen").style.display = 'none';     
+        document.getElementById("screen").style.display = 'none';     
     }
 
 function askRating()
