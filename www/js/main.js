@@ -20,9 +20,7 @@
 
     function initApp() {
         if (!AdMob) { alert('admob plugin not ready'); return; }
-        alert('4');
         initAd();
-        alert('5');
         //display interstitial at startup
         loadInterstitial();
     }
@@ -32,9 +30,7 @@
             bgColor: 'black', // color name, or '#RRGGBB'
             isTesting: false // set to true, to receiving test ad for testing purpose
         };
-        alert('6');
         AdMob.setOptions(defaultOptions);
-        alert('7');
         registerAdEvents();
     }
     // optional, in case respond to events or handle error
@@ -62,16 +58,12 @@
    function checkFirstUse()
     {
         $(".dropList").select2();
-        $('#simplemenu').sidr();
-        alert('1');
         window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
             window.ga.trackView('Home');
         });  
-        alert('2');
-        //initApp();
-        //alert('3');
-        //askRating();
-        document.getElementById("screen").style.display = 'none';     
+        initApp();
+        askRating();
+        //document.getElementById("screen").style.display = 'none';     
     }
 
 function askRating()
@@ -82,7 +74,7 @@ function askRating()
   usesUntilPrompt: 10,
   promptAgainForEachNewVersion: true,
   storeAppURL: {
-                ios: '1369778129',
+                ios: '1420660376',
                 android: 'market://details?id=com.milwaukee.free'
                }
 };
