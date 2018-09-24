@@ -2,7 +2,7 @@
         if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent))) {
             document.addEventListener('deviceready', checkFirstUse, false);
         } else {
-            checkFirstUse();
+            notFirstUse();
         }
     }
     var admobid = {};
@@ -33,6 +33,7 @@
         AdMob.setOptions(defaultOptions);
         registerAdEvents();
     }
+
     // optional, in case respond to events or handle error
     function registerAdEvents() {
         // new events, with variable to differentiate: adNetwork, adType, adEvent
@@ -52,18 +53,32 @@
     }
 
     function loadInterstitial() {
-        AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: true });
+        if ((/(android|windows phone)/i.test(navigator.userAgent))) {
+            AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: true });
+        } else if ((/(ipad|iphone|ipod)/i.test(navigator.userAgent))) {
+            AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: true });
+            //document.getElementById("screen").style.display = 'none';     
+        } else
+        {
+            document.getElementById("screen").style.display = 'none';     
+        }
     }
 
    function checkFirstUse()
     {
         $(".dropList").select2();
-        window.ga.startTrackerWithId('UA-88579601-15', 1, function(msg) {
+        window.ga.startTrackerWithId('UA-88579601-16', 1, function(msg) {
             window.ga.trackView('Home');
         });  
         initApp();
         askRating();
         //document.getElementById("screen").style.display = 'none';     
+    }
+
+   function notFirstUse()
+    {
+        $(".dropList").select2();
+        document.getElementById("screen").style.display = 'none';     
     }
 
 function askRating()
@@ -222,8 +237,4 @@ function saveFavorites()
         }
         localStorage.setItem("Favorites", favStop);
         $("#message").text('Stop added to favorites!!');
-        if(window.parent.document.getElementById('frmFaves').src != '')
-        {
-            window.parent.document.getElementById('frmFaves').src = window.parent.document.getElementById('frmFaves').src;
-        }
 }
