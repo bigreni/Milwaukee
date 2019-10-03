@@ -69,9 +69,9 @@
         $(".dropList").select2();
         initApp();
         askRating();
-        window.ga.startTrackerWithId('UA-88579601-16', 1, function(msg) {
-            window.ga.trackView('Home');
-        }); 
+        //window.ga.startTrackerWithId('UA-88579601-16', 1, function(msg) {
+        //    window.ga.trackView('Home');
+        //}); 
         //document.getElementById("screen").style.display = 'none';     
     }
 
