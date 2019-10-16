@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
 id="com.milwaukee.free" 
-version="1.0.5"
+version="1.0.6"
 versionCode = "5" 
 xmlns="http://www.w3.org/ns/widgets"
 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,7 +31,7 @@ xmlns:gap="http://phonegap.com/ns/1.0"
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="21" />
-    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-targetSdkVersion" value="28" />
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="DisallowOverscroll" value ="true" />
@@ -54,6 +54,7 @@ xmlns:gap="http://phonegap.com/ns/1.0"
             <application android:usesCleartextTraffic="true" />
     </edit-config>
     </platform>
+    <platform name="ios" />
     <icon src="icon.png" gap:role="default" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/Icon-36.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/Icon-48.png" />
