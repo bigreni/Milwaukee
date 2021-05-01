@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+<link rel="stylesheet" type="text/css" href="http://bigreni.com/css/milwaukee/index.css" />
+<!-- Include the jQuery library -->
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<link href="css/select2.min.css" rel="stylesheet" />
+<script src="js/select2.min.js"></script>
+<title>MCTS Arrivals</title>
+</head>
+<body>
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jsrender.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        var cachebuster = Math.round(new Date().getTime() / 1000);
+        document.write('<script type="text/javascript" src="http://bigreni.com/js/milwaukee/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        //document.write('<script type="text/javascript" src="js/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+    </script>	
+    <div id="fullpage" data-role="page">
+		<div id="contentBox" class="box">
+                 <h3>MCTS Live Arrival Times</h3>
+			<table class="routeBox" style="width: 100vw;">
+                <tr>
+                    <td colspan="2">Show all routes for the stop: 
+                        <label class="switch">
+                          <input id="allRoutes" type="checkbox">
+                          <div class="slider round"></div>
+                        </label>                
+                    </td>
+                </tr>
+				<tr>
+					<td colspan="2">Route:</td>
+                </tr>
+            <tr>
+    	        <td>
+                    <div>
+                        <select id="MainMobileContent_routeList" class="dropList" style="width:90vw;" onchange="getDirections();">
+                            <option value="---">Select a Route</option>
+                            <option value="BLU">BLU - Fond du Lac-National</option>
+                            <option value="GOL">GOL - Wisconsin Avenue-UWM</option>
+                            <option value="GRE">GRE - Bayshore-Airport</option>
+                            <option value="PUR">PUR - 27th Street</option>
+                            <option value="RED">RED - Capitol Drive</option>
+                            <option value="6">6 - New Berlin Ind. Park JOBLINE</option>
+                            <option value="12">12 - Teutonia-Hampton</option>
+                            <option value="14">14 - Humboldt-Forest Home</option>
+                            <option value="15">15 - Holton-Kinnickinnic</option>
+                            <option value="17">17 - Canal Street</option>
+                            <option value="19">19 - MLK Jr. Dr. - S. 13th &amp; S. 20th</option>
+                            <option value="21">21 - North Avenue</option>
+                            <option value="22">22 - Center Street</option>
+                            <option value="23">23 - FDL-National (Local)</option>
+                            <option value="27">27 - 27th Street (Local)</option>
+                            <option value="28">28 - 108th Street</option>
+                            <option value="30">30 - Sherman-Wisconsin</option>
+                            <option value="30X">30X - Sherman-Wisconsin Express</option>
+                            <option value="31">31 - State-Highland</option>
+                            <option value="33">33 - Vliet-Juneau</option>
+                            <option value="35">35 - 35th Street</option>
+                            <option value="40">40 - College Flyer</option>
+                            <option value="43">43 - Hales Corners Flyer</option>
+                            <option value="44">44 - National Flyer</option>
+                            <option value="46">46 - Loomis-Southridge Flyer</option>
+                            <option value="48">48 - South Shore Flyer</option>
+                            <option value="49">49 - Bayshore-Brown Deer Flyer</option>
+                            <option value="51">51 - Oklahoma Avenue</option>
+                            <option value="52">52 - Clement-15th Avenue</option>
+                            <option value="53">53 - Lincoln Avenue</option>
+                            <option value="54">54 - Mitchell-Burnham</option>
+                            <option value="55">55 - Layton Avenue</option>
+                            <option value="56">56 - Greenfield Avenue</option>
+                            <option value="57">57 - Walnut-N. 92nd</option>
+                            <option value="60">60 - Burleigh Street</option>
+                            <option value="61">61 - Appleton-Keefe JOBLINE</option>
+                            <option value="63">63 - Silver Spring-Port Washington</option>
+                            <option value="64">64 - S. 60th Street</option>
+                            <option value="67">67 - N. 76th-S. 84th &amp; S. 92nd</option>
+                            <option value="76">76 - N. 60th-S. 68th &amp; S. 76th</option>
+                            <option value="79">79 - Menomonee Falls Flyer</option>
+                            <option value="80">80 - 6th Street</option>
+                            <option value="137">137 - House of Corrections</option>
+                            <option value="143">143 - Ozaukee County Express</option>
+                            <option value="219">219 - Oak Creek Shuttle</option>
+                            <option value="223">223 - Park Place-Bradley Woods Shuttle</option>
+                            <option value="276">276 - Brown Deer Shuttle</option>
+                        </select>
+                    </div>
+                </td>
+					<td><div class="wait"><img id="routeWait" class="hidden wait" src="img/circle.gif" alt="Please wait"/></div></td>
+				</tr>
+				<tr>
+					<td colspan="2">Direction:</td>
+				</tr>	
+                <tr>
+                    	<td><select id="MainMobileContent_directionList" class="dropList" style="width:90vw;" onchange="getStops();">
+                            </select>
+                        </td>
+					<td><div class="wait"><img id="directionWait" class="hidden wait" src="img/circle.gif" alt="Please wait"/></div></td>
+				</tr>
+
+				<tr>
+					<td colspan="2">Stop:</td>
+				</tr>
+                <tr>
+                    <td><select id="MainMobileContent_stopList" class="dropList" style="width:90vw;" onchange="getArrivalTimes();">
+                        </select>
+                    </td>
+					<td><div class="wait"><img id="stopWait" class="hidden wait" src="img/circle.gif" alt="Please wait"/></div></td>
+				</tr>
+			</table>
+                <h2 style="text-align:center;">
+                    <button onclick="saveFavorites();" id="btnSave" style="border:none; background-color: lightgreen; color:black;visibility: hidden;">&#x2764; Add to favorites</button>
+                </h2>
+                <label id="message" style="font-size: large;"></label> 
+                <div class="js-next-bus-results" style="display:none; text-align: center;">
+                </div>
+		</div>
+	<!-- Templates for stop times-->
+
+</div>
+ <script>$(".dropList").select2();</script>   	
+</body>
+</html>
