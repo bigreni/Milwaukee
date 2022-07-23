@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.milwaukee.free" version="2.0.1" versionCode="7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.milwaukee.free" version="2.0.2" versionCode="8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>MCTS Bus Tracker</name>
     <description>
         Bus App.
@@ -27,14 +27,14 @@
     <preference name="DisallowOverscroll" value ="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="24" />
-    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="android-targetSdkVersion" value="30" />
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
     <cdv:plugin name="cordova-plugin-statusbar" source="npm"/>
     <cdv:plugin name="cordova-plugin-device" source="npm" />
     <cdv:plugin name="cordova-plugin-device-motion" source="npm"/>
     <cdv:plugin name="cordova-plugin-geolocation" source="npm"/>
-    <cdv:plugin name="cordova-plugin-whitelist" source="npm"/>
     <cdv:plugin name="cordova-plugin-dialogs" source="npm"/>
     <cdv:plugin name="cordova-plugin-apprate" source="npm"/>
     <allow-navigation href="http://*/*" />
