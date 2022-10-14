@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.milwaukee.free" version="2.0.1" versionCode="7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.milwaukee.free" version="2.1" versionCode="9" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="AdMob">
         <param name="android-package" value="com.rjfun.cordova.admob.AdMobPlugin" />
         <param name="onload" value="true" />
@@ -19,6 +19,9 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
+    <feature name="Idfa">
+        <param name="android-package" value="by.chemerisuk.cordova.advertising.IdfaPlugin" />
+    </feature>
     <name>MCTS Bus Tracker</name>
     <description>
         Bus App.
@@ -28,15 +31,15 @@
     </author>
     <content src="index.html" />
     <cdv:plugin name="cordova-plugin-admobpro" source="npm">
-        <variable name="ADMOB_APP_ID" value="pub-9249695405712287" />
     </cdv:plugin>
+    <cdv:plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" />
     <cdv:plugin name="cordova-plugin-statusbar" source="npm" />
     <cdv:plugin name="cordova-plugin-device" source="npm" />
-    <cdv:plugin name="cordova-plugin-device-motion" source="npm" />
     <cdv:plugin name="cordova-plugin-geolocation" source="npm" />
-    <cdv:plugin name="cordova-plugin-whitelist" source="npm" />
     <cdv:plugin name="cordova-plugin-dialogs" source="npm" />
     <cdv:plugin name="cordova-plugin-apprate" source="npm" />
+    <cdv:plugin name="cordova-plugin-idfa" source="npm" />
+    <cdv:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="data:*" />
@@ -48,6 +51,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <icon src="icon.png" />
+    <preference default="ca-app-pub-9249695405712287~3486375019" name="ADMOB_ANDROID_APP_ID" />
+    <preference default="20.4.0" name="PLAY_SERVICES_VERSION" />
     <allow-intent href="market:*" />
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
         <application android:usesCleartextTraffic="true" />
@@ -69,7 +74,12 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="24" />
-    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="android-targetSdkVersion" value="30" />
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <preference name="InterceptRemoteRequests" value="all" />
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
 </widget>

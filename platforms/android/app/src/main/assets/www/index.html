@@ -16,8 +16,6 @@
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 <link href="css/select2.min.css" rel="stylesheet" />
 <script src="js/select2.min.js"></script>
-<link rel="stylesheet" href="css/jquery.sidr.dark.min.css">
-<script src="js/jquery.sidr.min.js"></script>
 <title>MCTS Arrivals</title>
     <style>
             /* Hide all the app pages until jQuery Mobile inits to
@@ -32,7 +30,7 @@
                 left: 0;
                 right: 0;
                 z-index:1001;
-                background: lightgrey;
+                background: url(https://s3.us-east-2.amazonaws.com/bigreni.com/img/status.gif) no-repeat center center; 
                 text-shadow: none;
                 color: black;
             }
@@ -41,11 +39,9 @@
 <body>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
-        document.write('<script type="text/javascript" src="https://s3.us-east-2.amazonaws.com/bigreni.com/js/milwaukee/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
-        //document.write('<script type="text/javascript" src="js/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        // document.write('<script type="text/javascript" src="https://s3.us-east-2.amazonaws.com/bigreni.com/js/milwaukee/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
+        document.write('<script type="text/javascript" src="js/main.js?cb=' +cachebuster+'"></scr' + 'ipt>');
     </script>	
-	<script type="text/javascript" src="js/jsrender.min.js"></script>
-	<script type="text/javascript" src="js/jquery.cookie.js"></script>
     <div id="screen" class="splashscreen" style="display: none"></div>
         <script>
             // Show the splash screen with a loading message
@@ -54,18 +50,12 @@
                 onLoad();
                 //document.getElementById("screen").style.display = 'none';
             };
-            document.getElementById("screen").innerHTML = 'Loading...';
+            //document.getElementById("screen").innerHTML = 'Loading...';
             document.getElementById("screen").style.display = 'block';
         </script> 
     <div id="fullpage" data-role="page">
 		<div id="contentBox" class="box">
                  <h3>MCTS Live Arrival Times</h3>
-            <!--<div id="sidr">
-              <ul>
-                <li><a href="index.html" >Arrivals</a></li>
-                <li><a href="javascript:loadFaves();" >Favorites</a></li>
-              </ul>
-            </div>-->
 			<table class="routeBox" style="width: 100vw;">
                 <tr>
                     <td colspan="2">Show all routes for the stop: 

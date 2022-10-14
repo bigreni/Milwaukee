@@ -61,7 +61,7 @@
             AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: false });
             //document.getElementById("screen").style.display = 'none';     
         } else if ((/(ipad|iphone|ipod)/i.test(navigator.userAgent))) {
-            AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: true });
+            AdMob.prepareInterstitial({ adId: admobid.interstitial, isTesting: false, autoShow: false });
             //document.getElementById("screen").style.display = 'none';     
         } else
         {
@@ -73,11 +73,8 @@
     {
         $(".dropList").select2();
         initApp();
-        askRating();
-        //window.ga.startTrackerWithId('UA-88579601-16', 1, function(msg) {
-        //    window.ga.trackView('Home');
-        //}); 
-        //document.getElementById("screen").style.display = 'none';     
+        checkPermissions();
+        askRating();     
     }
 
    function notFirstUse()
@@ -86,10 +83,31 @@
         document.getElementById("screen").style.display = 'none';     
     }
 
+    function checkPermissions(){
+        const idfaPlugin = cordova.plugins.idfa;
+    
+        idfaPlugin.getInfo()
+            .then(info => {
+                if (!info.trackingLimited) {
+                    return info.idfa || info.aaid;
+                } else if (info.trackingPermission === idfaPlugin.TRACKING_PERMISSION_NOT_DETERMINED) {
+                    return idfaPlugin.requestPermission().then(result => {
+                        if (result === idfaPlugin.TRACKING_PERMISSION_AUTHORIZED) {
+                            return idfaPlugin.getInfo().then(info => {
+                                return info.idfa || info.aaid;
+                            });
+                        }
+                    });
+                }
+            });
+    }
 function askRating()
 {
-  AppRate.preferences = {
-  useLanguage:  'en',
+cordova.plugins.AppRate.setPreferences = {
+    reviewType: {
+        ios: 'AppStoreReview',
+        android: 'InAppBrowser'
+        },
   usesUntilPrompt: 10,
   promptAgainForEachNewVersion: true,
   reviewType: {
@@ -114,14 +132,14 @@ function loadFaves()
 
 function showAd()
 {
-    document.getElementById("screen").style.display = 'block';     
-    if ((/(android|windows phone)/i.test(navigator.userAgent))) {
-        AdMob.isInterstitialReady(function(isready){
-            if(isready) 
-                AdMob.showInterstitial();
-        });
-    }
-    document.getElementById("screen").style.display = 'none'; 
+document.getElementById("screen").style.display = 'block';     
+if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent))) {
+    AdMob.isInterstitialReady(function(isready){
+        if(isready) 
+            AdMob.showInterstitial();
+    });
+}
+document.getElementById("screen").style.display = 'none'; 
 }
 
 function getDirections() {

@@ -25,16 +25,29 @@
     "cordova-plugin-geolocation": {
       "GPS_REQUIRED": "true",
       "PACKAGE_NAME": "com.milwaukee.free"
-    }
-  },
-  "dependent_plugins": {
+    },
+    "cordova-plugin-idfa": {
+      "ANDROID_PLAY_ADID_VERSION": "17.0.+",
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
     "cordova-admobsdk": {
       "PACKAGE_NAME": "com.milwaukee.free"
     },
+    "cordova-plugin-wkwebview-file-xhr": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    }
+  },
+  "dependent_plugins": {
     "cordova-plugin-extension": {
       "PACKAGE_NAME": "com.milwaukee.free"
     },
     "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-support-android-plugin": {
       "PACKAGE_NAME": "com.milwaukee.free"
     }
   }

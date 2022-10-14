@@ -60,16 +60,4 @@ function loadMain()
     window.location = "index.html";
 }
 
-function loadFaves()
-{
-    //if(document.getElementById('frmFaves').src == '')
-    //{
-    //    document.getElementById('frmFaves').src = 'Favorites.html';
-    //}
-    //document.getElementById('divFaves').style.display = 'block';
-    //document.getElementById('divArrivals').style.display = 'none';    
-    //document.getElementById('divArrivals').style.height = '0vh';
-    //document.getElementById('divFaves').style.height = '92vh';
-    window.location = "Favorites.html";
 
-}
