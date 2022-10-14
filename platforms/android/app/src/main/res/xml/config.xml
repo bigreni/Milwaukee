@@ -22,6 +22,9 @@
     <feature name="Idfa">
         <param name="android-package" value="by.chemerisuk.cordova.advertising.IdfaPlugin" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
     <name>MCTS Bus Tracker</name>
     <description>
         Bus App.
@@ -51,7 +54,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <icon src="icon.png" />
-    <preference default="ca-app-pub-9249695405712287~3486375019" name="ADMOB_ANDROID_APP_ID" />
+    <preference default="ca-app-pub-9249695405712287~7187094681" name="ADMOB_ANDROID_APP_ID" />
     <preference default="20.4.0" name="PLAY_SERVICES_VERSION" />
     <allow-intent href="market:*" />
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
@@ -74,12 +77,9 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="24" />
-    <preference name="android-targetSdkVersion" value="30" />
+    <preference name="android-targetSdkVersion" value="32" />
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="AndroidInsecureFileModeEnabled" value="true" />
     <preference name="InterceptRemoteRequests" value="all" />
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
 </widget>

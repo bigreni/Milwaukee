@@ -7,9 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-admobsdk": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
     "cordova-plugin-admobpro": {
-      "ADMOB_APP_ID": "pub-9249695405712287",
-      "PLAY_SERVICES_VERSION": "16.0.0",
+      "ADMOB_ANDROID_APP_ID": "ca-app-pub-1855415514372943~9063671314",
+      "PLAY_SERVICES_VERSION": "20.4.0",
       "PACKAGE_NAME": "com.milwaukee.free"
     },
     "cordova-plugin-apprate": {
@@ -31,9 +34,6 @@
       "PACKAGE_NAME": "com.milwaukee.free"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.milwaukee.free"
-    },
-    "cordova-admobsdk": {
       "PACKAGE_NAME": "com.milwaukee.free"
     },
     "cordova-plugin-wkwebview-file-xhr": {

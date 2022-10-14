@@ -103,8 +103,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
+    "cordova-admobsdk": "8.13.0",
     "cordova-plugin-extension": "1.5.4",
-    "cordova-plugin-admobpro": "2.49.0",
+    "cordova-plugin-admobpro": "8.13.1",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-nativestorage": "2.3.2",
     "cordova-plugin-apprate": "1.7.2",

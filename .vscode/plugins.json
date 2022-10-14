@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-admobpro","cordova-plugin-extension","cordova-admobsdk","cordova-plugin-device","cordova-plugin-dialogs","cordova-plugin-apprate","cordova-plugin-nativestorage","cordova-plugin-geolocation"]}
+{"plugins":["cordova-plugin-admobpro","cordova-plugin-extension","cordova-plugin-device","cordova-plugin-dialogs","cordova-plugin-apprate","cordova-plugin-nativestorage","cordova-plugin-geolocation","cordova-plugin-idfa","cordova-support-android-plugin","cordova-plugin-inappbrowser","cordova-admobsdk","cordova-plugin-wkwebview-file-xhr"]}

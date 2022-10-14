@@ -23,8 +23,8 @@
       "cordova-plugin-wkwebview-file-xhr": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "devDependencies": {
