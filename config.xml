@@ -51,7 +51,7 @@
     <allow-intent href="geo:*" />
 	<icon src="icon.png" />
     <platform name="android">
-	<preference name="ADMOB_ANDROID_APP_ID" default="ca-app-pub-9249695405712287~3486375019"/>
+	<preference name="ADMOB_ANDROID_APP_ID" default="ca-app-pub-9249695405712287~7187094681"/>
 	<preference name="PLAY_SERVICES_VERSION" default="20.4.0"/>
         <allow-intent href="market:*" />
 		<edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
@@ -65,7 +65,7 @@
         <edit-config file="*-Info.plist" mode="merge" target="NSUserTrackingUsageDescription">
             <string>Used to remember and personalize your experience</string>
         </edit-config>
-        <preference name="ADMOB_IOS_APP_ID" default="ca-app-pub-9249695405712287~2364865031"/>
+        <preference name="ADMOB_IOS_APP_ID" default="ca-app-pub-9249695405712287~9611708354"/>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
 	    <icon height="57" src="res/icon/ios/Icon57.png" width="57" />
