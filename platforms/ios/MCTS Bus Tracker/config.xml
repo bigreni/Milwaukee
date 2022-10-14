@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.milwaukee.free" version="2.1" versionCode="9" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CDVWebViewEngine">
+        <param name="ios-package" value="CDVWebViewEngine" />
+    </feature>
+    <feature name="LaunchScreen">
+        <param name="ios-package" value="CDVLaunchScreen" />
+    </feature>
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="AdMob">
+        <param name="ios-package" value="CDVAdMobPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="NativeStorage">
+        <param name="ios-package" value="NativeStorage" />
+    </feature>
+    <feature name="AppRate">
+        <param name="ios-package" value="CDVAppRate" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Idfa">
+        <param name="ios-package" value="IdfaPlugin" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVWKInAppBrowser" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="CDVWKWebViewFileXhr">
+        <param name="ios-package" value="CDVWKWebViewFileXhr" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>MCTS Bus Tracker</name>
+    <description>
+        Bus App.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <cdv:plugin name="cordova-plugin-admobpro" source="npm">
+    </cdv:plugin>
+    <cdv:plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" />
+    <cdv:plugin name="cordova-plugin-statusbar" source="npm" />
+    <cdv:plugin name="cordova-plugin-device" source="npm" />
+    <cdv:plugin name="cordova-plugin-geolocation" source="npm" />
+    <cdv:plugin name="cordova-plugin-dialogs" source="npm" />
+    <cdv:plugin name="cordova-plugin-apprate" source="npm" />
+    <cdv:plugin name="cordova-plugin-idfa" source="npm" />
+    <cdv:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="icon.png" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+        <string>Need location access to find things nearby</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="merge" target="NSUserTrackingUsageDescription">
+        <string>Used to remember and personalize your experience</string>
+    </edit-config>
+    <preference default="ca-app-pub-9249695405712287~2364865031" name="ADMOB_IOS_APP_ID" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <icon height="57" src="res/icon/ios/Icon57.png" width="57" />
+    <icon height="72" src="res/icon/ios/Icon72.png" width="72" />
+    <icon height="114" src="res/icon/ios/Icon114.png" width="114" />
+    <icon height="144" src="res/icon/ios/Icon144.png" width="144" />
+    <icon height="120" src="res/icon/ios/Icon120.png" width="120" />
+    <icon height="76" src="res/icon/ios/Icon76.png" width="76" />
+    <icon height="152" src="res/icon/ios/Icon152.png" width="152" />
+    <icon height="50" src="res/icon/ios/Icon50.png" width="50" />
+    <icon height="40" src="res/icon/ios/Icon40.png" width="40" />
+    <icon height="100" src="res/icon/ios/Icon100.png" width="100" />
+    <icon height="167" src="res/icon/ios/Icon167.png" width="167" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaTypesRequiringUserActionForPlayback" value="none" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="24" />
+    <preference name="android-targetSdkVersion" value="30" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <preference name="InterceptRemoteRequests" value="all" />
+</widget>

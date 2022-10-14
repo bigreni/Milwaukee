@@ -1,0 +1,52 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-admobsdk": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-admobpro": {
+      "ADMOB_IOS_APP_ID": "ca-app-pub-1855415514372943~7447337312",
+      "DISABLESDKCRASHREPORTING": "false",
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-apprate": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-idfa": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-wkwebview-file-xhr": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    },
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.milwaukee.free"
+    }
+  }
+}
