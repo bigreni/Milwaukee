@@ -101,6 +101,7 @@
                 }
             });
     }
+    
 function askRating()
 {
 cordova.plugins.AppRate.setPreferences = {
@@ -108,6 +109,7 @@ cordova.plugins.AppRate.setPreferences = {
         ios: 'AppStoreReview',
         android: 'InAppBrowser'
         },
+  useLanguage:  'en',
   usesUntilPrompt: 10,
   promptAgainForEachNewVersion: true,
   reviewType: {
